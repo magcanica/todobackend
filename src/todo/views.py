@@ -1,3 +1,6 @@
+
+
+
 from django.shortcuts import render
 from todo.models import TodoItem
 from todo.serializers import TodoItemSerializer
@@ -19,4 +22,4 @@ class TodoItemViewSet(viewsets.ModelViewSet):
 
 	def delete(self, request):
 		TodoItem.objects.all().delete();
-		return Response(status.HTTP_204_NO_CONTENT)	
+		return Response(status=status.HTTP_204_NO_CONTENT)	
